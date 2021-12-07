@@ -125,6 +125,10 @@ img{
     left:0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    height: var(--header-height);
+    display:flex;
+    align-items: center;
+    box-shadow: 0 4px 4px rgb(0, 0, 0);
 }
 
 /*===== NAV =====*/
@@ -132,7 +136,7 @@ img{
     max-width: 1024px;
     height:var(--header-height);
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -140,7 +144,12 @@ img{
     color:var(--text-color);
 }
 
+
 .nav__link:active{
+    color:var(--title-color);
+}
+
+.nav__logo {
     color:var(--title-color);
 }
 
@@ -154,7 +163,7 @@ img{
         text-align: center;
         transition:.4s;
         background-color: var(--body-color);
-        box-shadow: 0 4px 4px rgb(27, 27, 27);
+        box-shadow: 0 4px 4px rgb(0, 0, 0);
         border-radius: 0 0 1rem 1rem;
         z-index: var(--z-fixed);
     }
@@ -293,8 +302,8 @@ img{
     .nav {
         height: calc(var(--header-height)+ 1.5rem);
     }
-    .nav__menu {
-        margin-top: var(--mb-3);
+    .nav__toggle {
+        display: none;
     }
     .nav__list {
         display: flex;
